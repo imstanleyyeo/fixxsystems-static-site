@@ -1840,8 +1840,8 @@ a:hover .r-project-caption-wrapper .hollow-btn {
 
 .carousel {
   position: relative;
+  aspect-ratio: 16/9;
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -1905,7 +1905,7 @@ a:hover .r-project-caption-wrapper .hollow-btn {
 .home-bg {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1928,45 +1928,25 @@ a:hover .r-project-caption-wrapper .hollow-btn {
   object-fit: cover;
 }
 .home-bg .video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
   overflow: hidden;
-  /* Ensures no content spills out */
 }
 .home-bg .video-container iframe {
   position: absolute;
   top: 50%;
   left: 50%;
   width: auto;
-  /* Default width */
   height: auto;
-  /* Default height */
   min-width: 100%;
-  /* Ensures iframe fills horizontally */
   min-height: 100%;
-  /* Ensures iframe fills vertically */
   transform: translate(-50%, -50%);
-  /* Centers iframe */
+  object-fit: cover;
 }
 
 /* Aspect Ratio Media Queries */
-@media (max-aspect-ratio: 16/9) {
-  .video-container iframe {
-    width: 300vw;
-    /* Increase width for taller viewports */
-    height: 150vh;
-  }
-}
-@media (min-aspect-ratio: 16/9) {
-  .video-container iframe {
-    width: 177.78vh;
-    /* Increase height for wider viewports */
-    height: 100vh;
-  }
-}
 .home-tagline-wrapper {
   position: absolute;
   bottom: 0;
@@ -1980,6 +1960,7 @@ a:hover .r-project-caption-wrapper .hollow-btn {
   justify-content: flex-end;
   align-items: flex-start;
   box-sizing: border-box;
+  z-index: 1;
 }
 .home-tagline-wrapper h1 {
   width: 100%;
