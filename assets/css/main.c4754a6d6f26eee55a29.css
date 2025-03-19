@@ -659,23 +659,6 @@ a {
   color: hsl(49, 83%, 80%);
 }
 
-.copyright {
-  color: #fff;
-  color: hsla(0, 100%, 100%, 0.57);
-  padding-top: 2rem;
-  padding-left: 1rem;
-}
-.copyright:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  content: "";
-  border-top: solid 1px #fff;
-  border-color: hsla(0, 100%, 100%, 0.57);
-}
-
 /*--- footer ---*/
 #footer {
   background: #2a0002;
@@ -697,11 +680,13 @@ a {
   grid-row-gap: 0px;
   position: relative;
   margin-top: 1rem;
+  padding: 0 1.5rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .copyright-wrapper {
     margin: 0 auto;
     max-width: 75rem;
+    padding: 0;
   }
 }
 
@@ -711,7 +696,7 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 1.5rem;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -725,9 +710,42 @@ a {
     flex-direction: row;
   }
 }
+@media (min-width: 1200px) {
+  .social {
+    padding: 0;
+  }
+}
 .social li a {
   display: flex;
   padding: 1rem 0;
+}
+
+.copyright {
+  color: #fff;
+  color: hsla(0, 100%, 100%, 0.57);
+  padding: 1.5rem 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.copyright:before {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: block;
+  content: "";
+  border-top: solid 1px #fff;
+  border-color: hsla(0, 100%, 100%, 0.57);
+}
+@media (min-width: 1200px) {
+  .copyright:before {
+    left: 0;
+    right: 0;
+    padding: 1.5rem 0;
+  }
 }
 
 /*--- navicon ---*/
@@ -1592,7 +1610,6 @@ a:hover .featured-caption-wrapper .hollow-btn {
 }
 
 /*--- cards ---*/
-.team-caption-wrapper,
 .card-caption-wrapper {
   padding: 2rem;
   background: #fff;
@@ -1750,55 +1767,6 @@ a:hover .project-figure-wrapper .project-caption-wrapper .hollow-btn {
   color: hsl(0, 100%, 100%);
   background: #7d3520;
   background: hsl(14, 59%, 31%);
-}
-
-.l-project-caption-wrapper,
-.r-project-caption-wrapper {
-  background: #fff;
-  background: hsl(0, 100%, 100%);
-  position: relative;
-  padding: 2rem;
-}
-
-@media (min-width: 768px) {
-  .l-project-caption-wrapper {
-    left: 0;
-    width: 50%;
-  }
-}
-@media (min-width: 576px) {
-  .l-project-caption-wrapper {
-    min-width: 45%;
-    width: 45%;
-    left: 1rem;
-  }
-}
-@media (min-width: 992px) {
-  .l-project-caption-wrapper {
-    min-width: 33%;
-    width: 33%;
-    left: 5rem;
-  }
-}
-a:hover .l-project-caption-wrapper .hollow-btn {
-  color: #fff;
-  color: hsl(0, 100%, 100%);
-  background: #7d3520;
-  background: hsl(14, 59%, 31%);
-}
-
-a:hover .r-project-caption-wrapper .hollow-btn {
-  color: #fff;
-  color: hsl(0, 100%, 100%);
-  background: #7d3520;
-  background: hsl(14, 59%, 31%);
-}
-
-.project-info {
-  display: block;
-}
-.project-info span {
-  margin-bottom: 2rem;
 }
 
 .svc-gradient-overlay,
